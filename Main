@@ -1,0 +1,15 @@
+package projetobcdd;
+import javax.swing.*;
+//JPanel, JButton
+//janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+///janela.setVisible(true);
+// Mensagem de erro!  JOptionPane.showMessageDialog(null, "AnyThing");
+
+public class ProjetoBCDD {
+    public static void main(String[] args) {
+        Inicio janela1 = new Inicio();
+        janela1.setVisible(true);
+        
+    }
+    
+}
