@@ -63,7 +63,16 @@ public class Inicio extends javax.swing.JFrame {
         pack();
     }// </editor-fold>                        
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+    
+    /*  
+    
+    Esse evento é disparado quando o botao for clicado!! Eu passei para inteiro e se a pessoa digitar uma letra, dá erro
+    ou seja..... só vai consultar no banco se for um numero inteiro.
+    Inserir aqui a integração com banco de dados (no try)
+    se o cpf digitado estiver no banco, ir para a tela de Menu, se não ir para a tela de cadastro.
+    
+    */
                                         
         try{
         int cpf = Integer.parseInt(dgt.getText());
