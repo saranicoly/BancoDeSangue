@@ -1,0 +1,51 @@
+CREATE TABLE bancosangue (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+nomeCompleto VARCHAR(50) NOT NULL,
+cpf VARCHAR(50) NOT NULL,
+dataNasc date NOT NULL,
+peso VARCHAR(50) NULL,
+tipoSangue VARCHAR(50) NOT NULL,
+operacao VARCHAR(30) NOT NULL,
+quantidade VARCHAR(30) NOT NULL,
+sexo VARCHAR(10) NOT NULL
+);
+
+CREATE TABLE paciente (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+doadoresDisp VARCHAR(255) NOT NULL,
+tempoRec date not NULL,
+recebeTransf VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE doador (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+pacientesDisp VARCHAR(255) NULL,
+totalDoacoes VARCHAR (255) NULL
+);
+
+
+=============
+
+CREATE TABLE cliente (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+nomeCompleto VARCHAR(50) NOT NULL,
+cpf VARCHAR(50) NOT NULL,
+dataNasc date NOT NULL,
+peso VARCHAR(50) NULL,
+tipoSangue VARCHAR(50) NOT NULL,
+sexo VARCHAR(10) NOT NULL
+);
+
+CREATE TABLE paciente (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+cliente integer,
+transfusao INTEGER,
+FOREIGN KEY(cliente) REFERENCES (cliente)
+);
+
+CREATE TABLE doador (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+cliente integer,
+doacoes INTEGER,
+FOREIGN KEY(cliente) REFERENCES (cliente)
+);
