@@ -273,7 +273,7 @@ public class Cadastro extends javax.swing.JFrame {
                 //inserir no banco de dados o nome da pessoa
             }
             
-            int numero_cpf = Integer.parseInt(dgt_cpf.getText());
+            long numero_cpf = Long.parseLong(dgt_cpf.getText());
             //cadastrar aqui o cpf da pessoa no banco de dados
             
             if (bt_feminino.isSelected()){
@@ -336,6 +336,8 @@ public class Cadastro extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Você esqueceu de nos informar seu tipo sanguíneo!", null, JOptionPane.ERROR_MESSAGE);
             }
             
+            Menu janelaMenu = new Menu();
+            janelaMenu.setVisible(true);
             //finalizar o cadastro no banco de dados e ir para a tela de menuse estiver tudo ok!
         }
         catch(Exception e) {
