@@ -109,6 +109,8 @@ public class Menu extends javax.swing.JFrame {
     private void bt_consultarActionPerformed(java.awt.event.ActionEvent evt) {                                             
         // inserir conexão com o banco de dados aqui.
         //consultar e retornar todos os dados na janela Consulta.
+        new Consulta().setVisible(true);
+        dispose();
     }                                            
 
     private void bt_deletarActionPerformed(java.awt.event.ActionEvent evt) {                                           
@@ -128,8 +130,8 @@ public class Menu extends javax.swing.JFrame {
         //colocar um if para consultar no banco de dados.
         //se o usuário for um doador, abrir o portal (try) se não, dar erro (catch)
         try{
-            Portal_doador janelaDoador = new Portal_doador();
-            janelaDoador.setVisible(true);
+            new Portal_doador().setVisible(true);
+            dispose();
         }
         catch (Exception e){
             JOptionPane.showMessageDialog(null, "Você precisa ser um doador para acessar o Portal do Doador!", null, JOptionPane.ERROR_MESSAGE);
@@ -140,8 +142,8 @@ public class Menu extends javax.swing.JFrame {
         // inserir aqui a conexão com o banco de dados.
         //se o usuário for um paciente, abrir o portal (try) se não, dar erro (catch)
         try{
-            Portal_Paciente janelaPaciente = new Portal_Paciente();
-            janelaPaciente.setVisible(true);
+            new Portal_Paciente().setVisible(true);
+            dispose();
         }
         catch (Exception e){
             JOptionPane.showMessageDialog(null, "Você precisa ser um paciente para acessar o Portal do Paciente!", null, JOptionPane.ERROR_MESSAGE);
@@ -150,7 +152,9 @@ public class Menu extends javax.swing.JFrame {
 
     private void bt_atualizarActionPerformed(java.awt.event.ActionEvent evt) {                                             
         // Inserir aqui a conexao com o banco de dados.
-        //ir para a tela de cadastro para atualizar os dados?
+        //ir para a tela de cadastro para atualizar os dados
+        new Cadastro().setVisible(true);
+        dispose();
     }                                            
 
     public static void main(String args[]) {
