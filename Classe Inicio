@@ -70,9 +70,8 @@ public class Inicio extends javax.swing.JFrame {
               //evento que será iniciado ao clicar no botão                          
         try{
         long cpf = Long.parseLong(dgt.getText());
-        Cadastro janelaCadastro = new Cadastro();
-        janelaCadastro.setVisible(true);
-        
+        new Cadastro().setVisible(true);
+        dispose();
         //inserir aqui a conexão com o banco de dados.
         //Se o cpf estiver cadastrado ir para a tela menu, se não ir para a tela cadastro
     }
@@ -80,11 +79,6 @@ public class Inicio extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Por favor, insira novamente o CPF!", "Erro no CPF", JOptionPane.ERROR_MESSAGE);
         }
     }                                        
-
-    private void dgtActionPerformed(java.awt.event.ActionEvent evt) {                                    
-        // TODO add your handling code here:
-    }                                   
-
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
