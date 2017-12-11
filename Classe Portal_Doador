@@ -6,6 +6,9 @@ public class Portal_doador extends javax.swing.JFrame {
 
     public Portal_doador() {
         initComponents();
+         qtPacientes();
+         doacoesPossiveis();
+         totalDoacoes();
     }
 
     @SuppressWarnings("unchecked")
@@ -155,9 +158,6 @@ public class Portal_doador extends javax.swing.JFrame {
             @Override
             public void run() {
                 Portal_doador portalDoador = new Portal_doador();
-                portalDoador.qtPacientes();
-                portalDoador.doacoesPossiveis();
-                portalDoador.totalDoacoes();
                 portalDoador.setVisible(true);
             }
         });
